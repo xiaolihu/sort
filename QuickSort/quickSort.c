@@ -7,27 +7,31 @@ void quickSort(int array[], int low, int high)
     int i, j, pivot;
     int temp;
 
-    if (low > high) return; 
+    if (low > high) {
+        return;
+    }
 
     pivot = array[low]; // base number
     i = low;
     j = high;
-    while(i != j) {
-        while (array[j] >= pivot && i < j)
+    while (i != j) {
+        while (array[j] >= pivot && i < j) {
             j--;
-        while (array[i] <= pivot && i < j)
+        }
+        while (array[i] <= pivot && i < j) {
             i++;
+        }
 
-	if(i < j) {
+        if (i < j) {
             temp = array[i];
             array[i] = array[j];
-	    array[j] = temp;
-	}
+            array[j] = temp;
+        }
 
-	array[low] = a[i];
-	a[i] = pivot;
+        array[low] = array[i];
+        array[i] = pivot;
     }
 
-    quickSort(array, low, i - 1); 
-    quickSort(array, i + 1, high); 
+    quickSort(array, low, i - 1);
+    quickSort(array, i + 1, high);
 }

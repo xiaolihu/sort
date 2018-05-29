@@ -4,7 +4,7 @@
 //
 //
 
-void bubbleSort(int array[], int num) 
+void bubbleSort(int array[], int num)
 {
     int i, j, temp;
 
@@ -12,10 +12,10 @@ void bubbleSort(int array[], int num)
         for (j = 1; j < num - i; j++ ) {
             if (array[j - 1] > array[j]) {
                 temp = array[j - 1];
-		array[j - 1] = array[j];
-		array[j] = temp;
-	    }
-	}
+                array[j - 1] = array[j];
+                array[j] = temp;
+            }
+        }
     }
 }
 
@@ -30,13 +30,13 @@ void bubbleSort2(int array[], int num)
         for (j = 1; j < num - i; j++ ) {
             if (array[j - 1] > array[j]) {
                 temp = array[j - 1];
-		array[j - 1] = array[j];
-		array[j] = temp;
-		flag = true;
-	    }
-	}
+                array[j - 1] = array[j];
+                array[j] = temp;
+                flag = true;
+            }
+        }
 
-	if (!flag) {
+        if (!flag) {
             break;
         }
     }
