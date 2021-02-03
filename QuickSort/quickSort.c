@@ -2,6 +2,7 @@
 //
 //Xiaolin Huang
 
+// low and high are index of array or devided-array
 void quickSort(int array[], int low, int high)
 {
     int i, j, pivot;
@@ -28,10 +29,12 @@ void quickSort(int array[], int low, int high)
             array[j] = temp;
         }
 
-        array[low] = array[i];
-        array[i] = pivot;
     }
+    array[low] = array[i];
+    array[i] = pivot;
+    // all left smaller than pivot and bigger ones on right
 
+    // Recursively sort sub-array
     quickSort(array, low, i - 1);
     quickSort(array, i + 1, high);
 }
